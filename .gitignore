@@ -1,0 +1,4 @@
+.venv
+!**/migrations/__init__.py
+**/migratios/*.py
+__pycache__/
