@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.template import Template, Context
-
+from django.shortcuts import render #Esta función permite realizar un atajo
 
 def saludo(request):
     return HttpResponse("¡Hola Django!")
@@ -22,3 +22,16 @@ def probando_template(request):
     mi_documento = mi_template.render(mi_contexto)
     return HttpResponse(mi_documento)
 
+def mis_notas(request):
+    lista_de_notas = [2, 3, 5, 7, 9, 10, 10]
+    contexto = {"notas": lista_de_notas}
+    return render(request, "notas.html", contexto)
+
+def ver_persona(request):
+    contexto = {
+        "persona": {
+            "nombre": "Francisco",
+            "edad": "33",
+            },
+        }
+    return render(request, "personas.html", contexto)

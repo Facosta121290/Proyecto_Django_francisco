@@ -25,4 +25,6 @@ urlpatterns = [
     path("saludo_usuario/", views.saludo2),
     path("nombre/<nombre>/<apellido>", views.nombre),
     path("probando_template/", views.probando_template),
+    path("notas/", views.mis_notas),
+    path("ver_persona/", views.ver_persona),
 ]
