@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Mi negocio
+{% endblock titulo %}
+
+{% block contenido %}
+    <a href="{% url 'cliente:home' %}">Ir a Clientes</a>
+    <a href="{% url 'producto:home' %}">Ir a Productos</a>
+{% endblock contenido %}
