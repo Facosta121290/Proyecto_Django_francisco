@@ -59,3 +59,10 @@
 `python manage.py createsuperuser`
 
 > Crea un usuario administrador para acceder a 127.0.0.1:8000/admin
+
+## Crear archivo de requisitos: requirements.txt
+
+`pip freeze >> requirements.txt`
+
+> Como hacer si VSCode no llegase a instalar lo que tiene en archivo requirements
+`pip install -r requirements.txt` 
