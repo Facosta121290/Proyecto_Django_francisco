@@ -1,9 +1,7 @@
 {% extends 'core/base.html' %}
-
 {% block titulo %}
     {% include 'core/componentes/titulo1.html' with titulo="Cliente" %}
 {% endblock titulo %}
-
 {% block contenido %}
     <!-- {% for cliente in clientes %}
     <h2>{{ cliente.nombre }}</h2>
@@ -14,27 +12,20 @@
         {% else %}
         <p>No registra país de origen.</p>
         {% endif %}
-    {% endfor %} -->
-
-
-<!-- Mejorado: ChatGPT -->
-
-{% for cliente in clientes %}
-    <div class="card">
-        <div class="card-body">
-            <h2 class="card-title">{{ cliente.nombre }}</h2>
-            <p class="card-text">{{ cliente.apellido }}</p>
-            <p class="card-text">{{ cliente.nacimiento }}</p>
-            {% if cliente.pais_origen_id %}
-                <p class="card-text">{{ cliente.pais_origen_id }}</p>
-            {% else %}
-                <p class="card-text text-muted">No registra país de origen.</p>
-            {% endif %}
+{% endfor %} -->
+    <!-- Mejorado: ChatGPT -->
+    {% for cliente in clientes %}
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">{{ cliente.nombre }}</h2>
+                <p class="card-text">{{ cliente.apellido }}</p>
+                <p class="card-text">{{ cliente.nacimiento }}</p>
+                {% if cliente.pais_origen_id %}
+                    <p class="card-text">{{ cliente.pais_origen_id }}</p>
+                {% else %}
+                    <p class="card-text text-muted">No registra país de origen.</p>
+                {% endif %}
+            </div>
         </div>
-    </div>
-    
-{% endfor %}
-
-
-    
+    {% endfor %}
 {% endblock contenido %}

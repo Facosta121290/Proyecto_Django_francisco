@@ -6,10 +6,8 @@
 
 {% block contenido %}
     <ul>
-        {% for producto in productos %}
-            <li>{{ producto }}</li>
-        {% endfor %}
+        {% for producto in productos %}<li>{{ producto }}</li>{% endfor %}
     </ul>
-
+    
     <a href="{% url 'core:home' %}">Ir a home</a>
 {% endblock contenido %}
