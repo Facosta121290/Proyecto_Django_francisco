@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block titulo %}
-    {% include 'core/componentes/titulo1.html' with titulo="Producto" %}
+    {% include 'core/componentes/titulo1.html' with titulo="App Productos" %}
 {% endblock titulo %}
 
 {% block contenido %}
@@ -9,16 +9,13 @@
     <div class="fs-3 pb-4">
         <a href="{% url 'producto:productocategoria_create' %}">Crear Categorias de Productos</a>
     </div>
-    <div class="py-lg-4 ">
-        <form action="{% url 'producto:home' %}" method="get">
-            <input type="text" name="consulta" placeholder="Buscar...">
-        </form>
+    
+    <div class="fs-3 pb-4">
+        <a href="{% url 'producto:productocategoria_list' %}">Listar Categorias de Productos</a>
     </div>
-    <ul>
-        {% for producto in productos %}<li>{{ producto }}</li>{% endfor %}
-    </ul>
-    {% comment  %}
-        <a href="{% url 'core:home' %}">Ir a home</a>
-    {% endcomment %}
 
+    <div class="fs-3 pb-4">
+        <a href="{% url 'core:home' %}">Volver a Inicio</a>
+    </div>
+    
 {% endblock contenido %}

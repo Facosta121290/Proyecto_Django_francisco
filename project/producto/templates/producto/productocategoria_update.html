@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block titulo %}
-    {% include 'core/componentes/titulo1.html' with titulo="Productos: Crear Categoría de Productos" %}
+    {% include 'core/componentes/titulo1.html' with titulo="Productos: Cambiar Categoría de Productos" %}
 {% endblock titulo %}
 
 {% block contenido %}
@@ -12,7 +12,7 @@
     </form>
 
     <div class="fs-3 pb-4">
-        <a href="{% url 'producto:home' %}">Volver al Inicio de Producto</a>
+        <a href="{% url 'producto:productocategoria_list' %}">Volver</a>
     </div>
     
 {% endblock contenido %}
