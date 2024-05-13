@@ -6,8 +6,12 @@
 
 {% block contenido %}
     <ul>
-        <li>Nombre: {{ producto.nombre }}</li>
-        <li>Descripción: {{ producto.descripcion }}</li>
+        {% comment  %}
+            <li>Nombre: {{ producto.nombre }}</li>
+            <li>Descripción: {{ producto.descripcion }}</li>
+        {% endcomment %}
+        <li>Nombre: {{ object.nombre }}</li>
+        <li>Descripción: {{ object.descripcion }}</li>
     </ul>
 
     <div class="fs-3 pb-4">
